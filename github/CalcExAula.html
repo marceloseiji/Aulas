@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CalculadoraAulaJS</title>
+</head>
+
+<body>
+    <input type="text" id="visor"><br/>
+    <input placeholder="Informe os valores" id="campores"><br/>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <input id="btn" type="button" value="ce">
+    <input id="btn" type="button" value="C">
+    <input id="btn" type="button" value="&#x021D0;">
+    <input id="btn" type="button" value="&#x02236;">
+    <br/>
+    <input id="btn" type="button" value="7" onclick="clicar(value)">
+    <input id="btn" type="button" value="8" onclick="clicar(value)">
+    <input id="btn" type="button" value="9" onclick="clicar(value)">
+    <input id="btn" type="button" value="x" onclick="clicar(value)">
+    <br/>
+    <input id="btn" type="button" value="4" onclick="clicar(value)">
+    <input id="btn" type="button" value="5" onclick="clicar(value)">
+    <input id="btn" type="button" value="6" onclick="clicar(value)">
+    <input id="btn" type="button" value="-" onclick="clicar(value)">
+    <br/>
+    <input id="btn" type="button" value="1" onclick="clicar(value)">
+    <input id="btn" type="button" value="2" onclick="clicar(value)">
+    <input id="btn" type="button" value="3" onclick="clicar(value)">
+    <input id="btn" type="button" value="+" onclick="somar()">
+    <br/>
+    <input id="btn" type="button" value="&#x02213">
+    <input id="btn" type="button" value="0" onclick="clicar(value)">
+    <input id="btn" type="button" value="," onclick="clicar(value)">
+    <input id="btn" type="button" value="=" onclick="igual()">
+</body>
+
+<script>
+    nr = [];
+    guard = [];
+    function clicar(num) {   
+    nr.push(num);
+    document.getElementById("visor").value = nr;
+    document.getElementById("demo").innerHTML = nr;
+    }
+
+    function igual() {
+    var resultado = document.getElementById("visor").value;
+    var resultadof = resultado.replace(/,/g, "");
+    }
+
+    function somar() {
+    nr = [""];
+    guard = nr;
+    document.getElementById("visor").value = nr;
+    document.getElementById("demo2").innerHTML = guard;
+    }
+</script>
+
+</html>
